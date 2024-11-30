@@ -1,0 +1,23 @@
+<section class="registerSection">
+  {{#if errors}}
+  <div class="errors">
+    {{#each errors}}
+    <p>{{this.msg}}</p>
+    {{/each}}
+  </div>
+  {{/if}}
+  <div class="registerBody">
+    <form action="/register" method="POST" class="registerForm">
+      <div>
+        <input type="text" name="username" placeholder="Username" 
+        {{#if data.username}} value="{{data.username}}"{{/if}} />
+      </div>
+      <div><input type="password" name="password" placeholder="Password" /></div>
+      <div><input type="password" name="repass" placeholder="Repeat Password" /></div>
+      <p>Have an account? <a href="/login" class="reset">Login</a></p>
+      <div class="button">
+        <button class="customButton">Register</button>
+      </div>
+    </form>
+  </div>
+</section>

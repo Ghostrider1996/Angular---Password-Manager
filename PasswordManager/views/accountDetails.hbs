@@ -1,0 +1,29 @@
+<section class="detailsSection"></section>
+{{#if msg}}
+<div class="alert">
+    <h3 class="message">{{msg}}</h3>
+    <div class="buttons">
+        <a href="/record/delete/{{id}}">Confirm</a>
+        <a href="/record/delete/cancel/{{id}}">Cancel</a>
+    </div>
+</div>
+{{else if confirmation}}
+<div class="alert">
+    <h3 class="message">{{confirmation}}</h3>
+</div>
+{{/if}}
+
+<div class="detailsBox">
+    <img src="{{record.serviceImage}}" alt="{{record.serviceName}}">
+    <h1>{{record.serviceName}}</h1>
+    <p>Category: {{record.category}}<span></span></p>
+    <p>Username: <span class="hidden">{{record.username}}</span> </p>
+    <p>Password: <span class="hidden">{{record.password}}</span></p>
+    <p>Authentication: {{record.authentication}}</p>
+    <p>{{record.description}}</p>
+    <div class="buttons">
+        <a href="/record/update/{{record._id}}" class="leftLink">Edit Record</a>
+        <a href="/record/bin/{{record._id}}" class="rightLink">Delete Record</a>
+    </div>
+</div>
+</section>

@@ -1,0 +1,61 @@
+body .main .addAccount .innerForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+body .main .addAccount .addAccountForm,
+body .main .addCategory .addAccountForm {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .main .addAccount .innerForm,
+body .main .addCategory .innerForm {
+  padding: 1em;
+  margin-top: 2em;
+  border-radius: 0.4em;
+}
+.innerForm div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.innerForm div input,
+.innerForm div select,
+.innerForm div textarea {
+  width: 60%;
+}
+.innerForm div label {
+  flex-grow: 1;
+}
+/* add category form specific */
+.addCategoryForm {
+  text-align: center;
+}
+.addCategoryForm .innerCategoryForm button {
+  padding: 0.5em 1em;
+}
+.addCategoryForm .innerCategoryForm button,
+.addCategoryForm .innerCategoryForm input {
+  border-radius: 0.4em;
+}
+.innerCategoryForm {
+  margin-top: 2em;
+}
+.innerForm  .addAccountErrors {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  width: fit-content;
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  padding: 1em;
+}
+.addAccountErrors p {
+  display: block;
+  line-height: 2em;
+}

@@ -1,0 +1,47 @@
+<section class="detailsUpdate"></section>
+<div class="updateForm">
+    <form action="/record/update/{{record._id}}" method="POST">
+        <div>
+            <label for="serviceImage">Image URL:</label>
+            <input type="text" name="serviceImage" value="{{record.serviceImage}}">
+        </div>
+        <div>
+            <label for="serviceName">Service Name:</label>
+            <input type="text" name="serviceName" value="{{record.serviceName}}" />
+        </div>
+        <div>
+            <label for="category">Category:</label>
+            <select name="category" id="category">
+                <option value="{{record.category}}" selected hidden>{{record.category}}</option>
+                {{#each categories}}
+                <option value="{{this.category}}">{{this.category}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" name="username" value="{{record.username}}" />
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="text" name="password" value="{{record.password}}" />
+        </div>
+         <div>
+                <label for="category">Two Authentication Method:</label>
+                <select name="authentication" id="authentication">  
+                    <option value="{{record.authentication}}" hidden selected disabled>{{record.authentication}}</option>
+                    {{#each authenticationMethods}}
+                    <option value="{{this.method}}">{{this.method}}</option>
+                    {{/each}}
+                </select>
+            </div>
+        <div>
+            <label for="description">Description:</label>
+            <textarea name="description" id="description">{{record.description}}</textarea>
+        </div>
+        <div class="button">
+            <button>Update Record</button>
+        </div>
+    </form>
+</div>
+</section>

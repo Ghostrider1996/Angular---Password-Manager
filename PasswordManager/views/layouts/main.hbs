@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/site.css" type="text/css" />
+    <title>Password Manager</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <ul class="navUl">
+                 <li class="ulLi"><a href="/">Home</a></li>
+                 <li class="ulLi"><a href="/about">About</a></li>
+                {{#if hasUser}}
+                <li class="ulLi"><a href="/search">Search</a></li>
+                <li class="ulLi"><a href="/add-account">Add Account</a></li>
+                <li class="ulLi"><a href="/add-authentication-method">Add Authentication Method</a></li>
+                <li class="ulLi"><a href="/add-category">Add Category</a></li>
+                <li class="ulLi"><a href="/logout">Logout</a></li>
+                {{else}}
+                <li class="ulLi"><a href="/login">Login</a></li>
+                <li class="ulLi"><a href="/register">Register</a></li>
+                {{/if}}
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+
+
+        {{{body}}}
+
+    </main>
+    <footer class="footer">
+        <p class="footerP">Password Manager Self Driven Workshop</p>
+    </footer>
+</body>
+
+</html>

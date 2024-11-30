@@ -1,0 +1,18 @@
+<section class="homeSection">
+    {{#if confirmation}}
+    <div class="confirmation">
+        <h3 class="message">{{confirmation}}</h3>
+
+    </div>
+    {{/if}}
+    {{#unless userName}}<h1 class="textCenter">Welcome to your personal localhost password manager with friendly
+        graphical UI. To start using it for free! <a href="/register" class="reset">Register HERE</a></h1>{{/unless}}
+    <div class="innerHomeSection">
+        {{#if userName}}<h2>{{userName}}, Welcome to your personal localhost password manager with graphical UI!</h2>
+        {{/if}}
+        <img src="/static/images//Self-hosted-Password-Manager.jpg" alt="">
+        {{#if userName}}<h2>You have total of {{count}} actively managed accounts through the localhost manager. Browse
+            <a href="/search" class="searchLink">HERE</a> to find the Username and Password your looking for.</h2>
+        {{/if}}
+    </div>
+</section>

@@ -1,0 +1,10 @@
+<section class="errorPage">
+    {{#if errors.length}}
+    <div>
+        {{#each errors}}
+        <h1 class="error">{{this.msg}}</h1>
+        {{/each}}
+    </div>
+    {{/if}}
+    <p class="link">Go back to <a href="/" class="backHome">Home</a></p>
+</section>

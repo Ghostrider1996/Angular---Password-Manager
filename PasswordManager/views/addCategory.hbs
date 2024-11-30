@@ -1,0 +1,30 @@
+<section class="addCategory">
+    <form action="{{#if authenticationMethod}}/add-authentication-method{{else}}/add-category{{/if}}"
+        method="POST" class="addCategoryForm">
+        {{#if authenticationMethod}}
+        <h1>Add Authentication Method</h1>
+        {{else}}
+        <h1>Add Category</h1>
+        {{/if}}
+        {{#if errors}}
+
+        <div class="errors">
+            {{#each errors}}
+            <p>{{this.msg}}</p>
+            {{/each}}
+        </div>
+        {{/if}}
+
+        {{#if authenticationMethod}}
+        <div class="innerCategoryForm ">
+            <input type="text" name="method" placeholder="Authentication Method Name">
+            <button>Add Authentication Method</button>
+        </div>
+        {{else}}
+        <div class="innerCategoryForm ">
+            <input type="text" name="name" placeholder="Category name">
+            <button>Add Category</button>
+        </div>
+        {{/if}}
+    </form>
+</section>

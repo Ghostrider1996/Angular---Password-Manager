@@ -1,0 +1,66 @@
+<section class="addAccount">
+    <form action="/add-account" method="POST" class="addAccountForm">
+        <h1>Add Account</h1>
+        <div class="innerForm">
+            {{#if errors.length}}
+            <div class="addAccountErrors">
+                {{#each errors}}
+                <p class="error">{{this.msg}}</p>
+                {{/each}}
+            </div>
+            {{/if}}
+            <div>
+                <label for="serviceImage">Image URL:</label>
+                <input type="text" name="serviceImage" placeholder="Service Image" {{#if data}}
+                    value="{{data.serviceImage}}" {{/if}}>
+            </div>
+            <div>
+                <label for="serviceName">Service Name:</label>
+                <input type="text" name="serviceName" placeholder="Service Name" {{#if data}}
+                    value="{{data.serviceName}}" {{/if}}>
+            </div>
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" name="username" placeholder="Username" {{#if data}} value="{{data.username}}"
+                    {{/if}}>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="text" name="password" placeholder="Password" {{#if data}} value="{{data.password}}"
+                    {{/if}}>
+            </div>
+            <div>
+                <label for="category">Category:</label>
+                <select name="category" id="category">
+                    {{#if data.category}}
+                    <option value="{{data.category}}" hidden selected>{{data.category}}</option>
+                    {{else}}
+                    <option value="" hidden selected disabled>--- Select Category ---</option>
+                    {{/if}}
+                    {{#each categories}}
+                    <option value="{{this.category}}">{{this.category}}</option>
+                    {{/each}}
+                </select>
+            </div>
+            <div>
+                <label for="category">Two Authentication Method:</label>
+                <select name="authentication" id="authentication">
+                    {{#if data.category}}
+                    <option value="{{data.authentication}}" hidden selected>{{data.authentication}}</option>
+                    {{else}}
+                    <option value="" hidden selected disabled>--- Select Method ---</option>
+                    {{/if}}
+                    {{#each authenticationMethods}}
+                    <option value="{{this.method}}">{{this.method}}</option>
+                    {{/each}}
+                </select>
+            </div>
+            <div>
+                <label for="description">Description:</label>
+                <textarea name="description" id="description" placeholder="Description" rows="5"
+                    cols="50">{{#if data}}{{data.description}}{{/if}}</textarea>
+            </div>
+            <button>Add Account</button>
+        </div>
+    </form>
+</section>

@@ -1,0 +1,30 @@
+body .loginSection,
+body .registerSection {
+  margin: 5rem auto;
+  width: 20%;
+  padding: 2em;
+  text-align: center;
+}
+body .registerBody .button,
+body .registerBody p,
+body .loginBody .button,
+body .loginBody p {
+  margin-top: 0.5em;
+}
+.loginBody,
+.registerBody {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.loginBody input,
+.registerBody input {
+  width: 100%;
+}
+.loginForm,
+.registerForm {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+

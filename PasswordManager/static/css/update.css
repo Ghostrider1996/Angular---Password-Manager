@@ -1,0 +1,35 @@
+body .detailsUpdate {
+  width: 100%;
+}
+body .updateForm {
+  width: 40%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 1em;
+}
+body .updateForm div {
+  display: flex;
+  align-items: center;
+}
+body .updateForm div input,
+body .updateForm div select,
+body .updateForm div textarea {
+  width: calc(70% - 20px);
+}
+textarea {
+  width: inherit;
+  height: 20ch; /* Restricts visible height */
+  resize: none; /* Prevents resizing */
+}
+body .updateForm div label {
+  flex-grow: 1;
+}
+body .updateForm div:not(:first-child),
+body .updateForm button {
+  margin-top: 1em;
+  justify-content: center;
+}
+body .updateForm button,
+body .addAccountForm button {
+  width: 90%;
+}

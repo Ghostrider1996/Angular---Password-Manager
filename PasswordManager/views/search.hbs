@@ -1,0 +1,45 @@
+<section class="searchSection">
+    <div class="searchForm">
+        {{#if errors.length}}
+        <div class="addAccountErrors">
+            {{#each errors}}
+            <p class="error">{{this.msg}}</p>
+            {{/each}}
+        </div>
+        {{/if}}
+        <form action="/search" method="GET">
+            <div class="innerFormSearch">
+                <input type="text" name="serviceName" placeholder="Search by service name or website name" {{#if
+                    inputs.serviceName}}value="{{inputs.serviceName}}" {{/if}}>
+
+                <select name="category" id="category">
+                    <option value="" hidden selected>{{#if inputs.category}}{{inputs.category}}{{else}}Category{{/if}}
+                    </option>
+                    <option value="">---</option>
+                    {{#each categories}}
+                    <option value="{{category}}">{{category}}</option>
+                    {{/each}}
+                </select>
+
+                <button>Search</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="searchOutput">
+        {{#if results.length}}
+        {{#each results}}
+        <div class="account-box">
+            <img src="{{this.serviceImage}}" alt="{{this.serviceName}}">
+            <article>
+                <h2>{{this.serviceName}}</h2>
+                <p>Category: {{this.category}}</p>
+                <p class="link"><a href="/details/{{this._id}}">Details</a></p>
+            </article>
+        </div>
+        {{/each}}
+        {{else}}
+        <h2>No record found</h2>
+        {{/if}}
+    </div>
+</section>

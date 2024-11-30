@@ -1,0 +1,24 @@
+<section class="loginSection">
+  {{#if data.errors}}
+  <div class="errors">
+    {{#each data.errors}}
+    <p>{{error}}</p>
+    {{/each}}
+  </div>
+  {{/if}}
+  <div class="loginBody">
+    <form action="/login" method="post" class="loginForm">
+      <div>
+        <input type="text" name="username" placeholder="Username" 
+        {{#if data.username}}value="{{data.username}}"{{/if}}/>
+      </div>
+      <div>
+        <input type="password" name="password" placeholder="Password" />
+      </div>
+      <p>Don't have an account? <a href="/register" class="reset">Register</a></p>
+      <div class="button">
+        <button class="customButton">Login</button>
+      </div>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,71 @@
+.aboutSection {
+  display: flex;
+  justify-content: center;
+  min-height: 90vh;
+  text-align: center;
+  align-items: center;
+  line-height: 1.8rem;
+  font-size: 1.2rem;
+}
+.innerSection {
+  padding: 5rem;
+  margin-bottom: 5rem;
+}
+.innerSection,
+.authorSubSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.authorSubSection {
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.authorSubSection ul {
+  margin-top: 2rem;
+  z-index: 2;
+}
+.authorSubSection ul li,
+.aboutSection h1 {
+  padding: 1rem;
+}
+.innerSection p,
+.innerSection h2 {
+  margin: 0 auto;
+  width: 66ch;
+  padding: 1rem;
+}
+.authorSubSection {
+  background-image: url(/static/images/NIs7rfux_9lJT_1024.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  z-index: 0; /* Ensure the section itself is in a proper stacking context */
+}
+
+.authorSubSection .contacts p,
+.authorSubSection li,
+.authorSubSection h3,
+.authorSubSection h2 {
+  z-index: 10;
+  position: relative;
+}
+
+.authorSubSection::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Color filter */
+  z-index: 1; /* This pseudo-element will be behind the text */
+}
+.mainArticle {
+  padding: 1rem;
+}
+.mainArticle p,
+.mainArticle h2 {
+  z-index: 10;
+  position: relative;
+}
+.contacts ul {
+  display: flex;
+}

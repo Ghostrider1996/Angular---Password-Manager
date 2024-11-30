@@ -1,0 +1,21 @@
+.errorPage {
+  background-image: url(/static/images/404-not-found-graffiti-uhd-4k-wallpaper.jpg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 50vh;
+  text-align: center;
+}
+.errorPage h1,
+.errorPage p,
+.errorPage a {
+  font-weight: 800;
+  font-size: 1.5em;
+}
+.backHome {
+  padding: 0;
+  border: none;
+}
+.backHome:hover {
+  text-decoration: underline;
+};

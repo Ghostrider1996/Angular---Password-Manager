@@ -1,0 +1,52 @@
+body .main form input,
+body .main form select,
+form button,
+.main form textarea {
+  padding: 0.5em 0.5em;
+}
+body .main .innerForm {
+  text-align: center;
+  width: 50%;
+}
+body .main .innerFormSearch {
+  text-align: center;
+  width: 100%;
+} 
+form input{
+  width: 20%;
+}
+form select {
+  width: fit-content;
+}
+body .main .searchOutput {
+  display: flex;
+  margin-top: 5em;
+  padding: 0 2em;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 4em 2em;
+}
+body .main .searchOutput .account-box {
+  padding: 2em;
+  width: 20%;
+  border-radius: 0.8em;
+  text-align: center;
+}
+.account-box .link {
+  padding-top: 0.5em;
+}
+a,
+button {
+  border: 1px solid whitesmoke;
+  padding: 0.5em 1em;
+}
+body .main .searchOutput .account-box img {
+  width: 80%;
+  aspect-ratio: 4/3;
+}
+body .main .searchOutput .account-box article {
+  line-height: 1.8em;
+}
+.innerFormSearch button {
+  padding: 0.5rem 2rem;
+}

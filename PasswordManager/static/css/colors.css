@@ -1,0 +1,107 @@
+/* var colors */
+:root {
+  --bg-color: black;
+  --text-color: whitesmoke;
+  --main-element: rgba(165, 42, 42, 0.23);
+  --main-neutral: rgba(120, 115, 115, 0.3);
+  --box-shadow: rgba(245, 245, 245, 0.557);
+  --button-text: rgb(42, 41, 41);
+  --hover-back-bg: rgba(82, 81, 81, 0.678);
+  --transparent: transparent;
+}
+/*  body main colors */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+button:hover,
+a:hover {
+  transition: 0.4s;
+  color: var(--text-color);
+  background-color: var(--hover-back-bg);
+}
+a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+body .header {
+  background-color: var(--main-element);
+}
+body .footer {
+  background-color: var(--main-element);
+}
+/* search section colors */
+body .main .searchOutput .account-box {
+  background-color: var(--main-neutral);
+  box-shadow: 0rem 0rem 0.625rem 0.0625rem var(--box-shadow);
+}
+/* add account section colors */
+.innerForm {
+  background-color: var(--main-neutral);
+  box-shadow: 0rem 0rem 0.625rem 0.0625rem var(--box-shadow);
+}
+.addAccountErrors {
+  background-color: var(--main-neutral);
+  box-shadow: 0rem 0rem 0.625rem 0.0625rem var(--box-shadow);
+}
+/* details section colors */
+.detailsBox,
+.alert {
+  box-shadow: 0rem 0rem 0.625rem 0.0625rem var(--box-shadow);
+  background-color: var(--main-neutral);
+}
+.detailsBox .buttons a {
+  color: var(--button-text);
+  background-color: var(--text-color);
+}
+.detailsBox .hidden {
+  filter: blur(8px);
+}
+.detailsBox .hidden:hover {
+  filter: blur(0px);
+}
+/* update section */
+.updateForm {
+  background-color: var(--main-neutral);
+  box-shadow: 0rem 0rem 0.625rem 0.0625rem var(--box-shadow);
+}
+/* login register colors */
+body .loginSection,
+body .registerSection {
+  box-shadow: 0rem 0rem 0.625rem 0.0625rem var(--box-shadow);
+  background-color: var(--main-neutral);
+}
+/* Error page colors */
+.errorPage h1,
+.errorPage p {
+  color: var(--bg-color);
+}
+.errorPage a,
+.searchLink {
+  color: rgba(165, 42, 42, 0.9);
+}
+.backHome:hover,
+.searchLink:hover,
+.registerLink:hover,
+.reset:hover {
+  background-color: var(--transparent);
+}
+/* about section */
+.authorSubSection {
+  box-shadow: 0 0 10px 1px var(--box-shadow);
+}
+.mainArticle {
+  position: relative;
+}
+.mainArticle::before {
+  content: "";
+  inset: 0;
+  position: absolute;
+  background-color: rgb(5, 5, 5,0.8);
+  filter: blur(10px);
+  z-index: 0;
+}
+.aboutSection {
+  background-image: url(/static/images/0101.jpg);
+  background-size: cover;
+}
